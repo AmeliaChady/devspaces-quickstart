@@ -4,7 +4,8 @@ metadata:
 attributes:
   controller.devfile.io/storage-type: per-workspace
 components:
-  - container:
+  - name: cloud-native-app-dev
+    container:
       name: cloud-native-app-dev
       image: registry.redhat.io/devspaces/udi-rhel8
       mountSources: true
