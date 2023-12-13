@@ -3,23 +3,12 @@ metadata:
   name: CloudNativeAppDev
 attributes:
   controller.devfile.io/storage-type: per-workspace
-projects:
-  - name: cloud-native-app-dev
-    git:
-      remotes:
-        origin: https://github.com/redhat-appdev-practice/website
 components:
   - container:
       name: cloud-native-app-dev
       image: registry.redhat.io/devspaces/udi-rhel8
+      mountSources: true
       endpoints:
         - name: vuepress
           protocol: http
           targetPort: 8080
-commands:
-  - id: vuepress-install
-    exec:
-	commandLine: "npm install --prefix $(PROJECT_SOURCE) vuepress"
-events:
-  preStart:
-    - vuepress-install
