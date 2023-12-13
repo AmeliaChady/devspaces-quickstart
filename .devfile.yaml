@@ -6,7 +6,6 @@ attributes:
 components:
   - name: cloud-native-app-dev
     container:
-      name: cloud-native-app-dev
       image: registry.redhat.io/devspaces/udi-rhel8
       mountSources: true
       endpoints:
