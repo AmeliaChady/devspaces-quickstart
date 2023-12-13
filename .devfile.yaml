@@ -3,6 +3,11 @@ metadata:
   name: CloudNativeAppDev
 attributes:
   controller.devfile.io/storage-type: per-workspace
+projects:
+  - name: website
+    git:
+      remotes:
+        origin: https://github.com/redhat-appdev-practice/website
 components:
   - name: cloud-native-app-dev
     container:
